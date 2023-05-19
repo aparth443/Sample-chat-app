@@ -20,6 +20,9 @@
 		3CE79822DEA0833AC243E820 /* Pods_Flash_Chat_iOS13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A15C9AC64C32F5A0C6789FD /* Pods_Flash_Chat_iOS13.framework */; };
 		690124822A14C35000432DE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690124812A14C35000432DE9 /* GoogleService-Info.plist */; };
 		690124852A14F45D00432DE9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690124842A14F45C00432DE9 /* Constants.swift */; };
+		69FF12332A17A1390079CCBC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FF12322A17A1390079CCBC /* Message.swift */; };
+		69FF12362A17A7010079CCBC /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FF12342A17A7010079CCBC /* MessageCell.swift */; };
+		69FF12372A17A7010079CCBC /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FF12352A17A7010079CCBC /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		2A15C9AC64C32F5A0C6789FD /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		690124812A14C35000432DE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		690124842A14F45C00432DE9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		69FF12322A17A1390079CCBC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		69FF12342A17A7010079CCBC /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		69FF12352A17A7010079CCBC /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		D85BFBC6E1B2F436C5EFB76D /* Pods-Flash Chat iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.debug.xcconfig"; sourceTree = "<group>"; };
 		E43548A732762BDB943F5B2A /* Pods-Flash Chat iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,9 +82,9 @@
 		0B628175235DEE8100E35CAF /* Flash Chat iOS13 */ = {
 			isa = PBXGroup;
 			children = (
+				69FF12312A17A1290079CCBC /* Models */,
 				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
 				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
-				0B628194235DF03A00E35CAF /* Models */,
 				0B628193235DF03400E35CAF /* Views */,
 				0B628192235DF02000E35CAF /* Controllers */,
 				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
@@ -105,15 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
+				69FF12342A17A7010079CCBC /* MessageCell.swift */,
+				69FF12352A17A7010079CCBC /* MessageCell.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0B628194235DF03A00E35CAF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		31B296A4FE982F8D95CBAA29 /* Pods */ = {
@@ -123,6 +124,14 @@
 				E43548A732762BDB943F5B2A /* Pods-Flash Chat iOS13.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		69FF12312A17A1290079CCBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69FF12322A17A1390079CCBC /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8E2045B59BA1A0B8648125E2 /* Frameworks */ = {
@@ -194,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
+				69FF12372A17A7010079CCBC /* MessageCell.xib in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				690124822A14C35000432DE9 /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
@@ -255,8 +265,10 @@
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
 				690124852A14F45D00432DE9 /* Constants.swift in Sources */,
+				69FF12332A17A1390079CCBC /* Message.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
+				69FF12362A17A7010079CCBC /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
